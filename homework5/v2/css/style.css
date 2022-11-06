@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.formMain {
+	width: 500px;
+    padding: 25px;
+	display: flex;
+	flex-direction: column;
+	font-family: Arial;
+    margin: auto;
+}
+h3{
+	font-size: 43px;
+	text-align: center;
+}
+.form__item {
+	display: flex;
+	flex-direction: column;
+    margin: 20px 0px;
+}
+.form__itemText {
+	font-size: 13px;
+	margin-bottom: 5px;
+}
+.form__body input {
+	padding: 12px;
+	border: 1px solid gray;
+	border-radius: 5px;
+}
+.form__footer input {
+	background: blue;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 15px;
+    border: transparent;
+    cursor: pointer;
+}
+
