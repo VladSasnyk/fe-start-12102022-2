@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.body{
+    width: 100vh;
+    height: 100vh;
+}
+.banner__top{
+    height: 60vh;
+    background: url(../img/background.jpg);
+    background-size: cover;
+    background-position: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.banner__topText{
+    width: 100%;
+}
+h1{
+    background-color: rgba(220,220,220,0.3);
+    height: 85px;
+    text-align: center;
+    font-family: 'Nothing You Could Do', cursive;
+    font-size: 63px;
+    margin: 30px 0px;
+}
+
+.banner__mid{
+    display: flex;
+    justify-content: space-around;
+    padding-left: 120px;
+    padding-right: 120px;
+}
+.banner__text{
+    background: rgba(0,0,0,0.3);
+    height: 180px;
+    width: 25%;    
+    color: white;
+    text-align:justify;
+    padding: 28px 28px;
+    text-align-last: right;
+    font-size: 14px;
+    border-radius: 5px;
+}
+.banner__text h3{
+    font-size: 25px;
+    font-family: 'Nothing You Could Do', cursive;
+}
+.banner__bot{
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bot__left{
+    width: 40%;
+    height: 67%;
+    text-align: justify;
+    margin-right: 150px;
+}
+.bot__left h3{
+    font-family: 'Nothing You Could Do', cursive;;
+    font-size: 25px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+.bot__right{
+    width: 30%;
+    height: 67%;
+}    
+.bot__right p{
+    margin-left: 30px;
+    margin-bottom: 40px;
+}
+.bot__right i{
+    color: gray;
+    font-size: 30px;
+}
+.bot__right a{
+    text-decoration: none;
+    color: black;
+}
+.banner__text:hover {
+    background: rgba(0,0,0,0.5);
+}
