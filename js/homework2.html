@@ -1,0 +1,38 @@
+<!--  1. Среди трех чисел найти среднее арифметическое. Если среди чисел есть равные, вывести сообщение "Ошибка". Числа принять от пользователя.
+      2. Определить какое из трех, введенных пользователем, чисел максимальное и вывести его на экран -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <script type="text/javascript">
+      // 1
+      
+      var number1 = +prompt('Number 1?');
+      var number2 = +prompt('Number 2?');
+      var number3 = +prompt('Number 3? ');
+
+      if(number1 == number2 || number2 == number3 || number1 == number3){
+         alert("Ошибка");
+      }
+      else{
+            alert((number1+number2+number3)/3);
+         }
+
+      // 2
+
+      var number1 = +prompt('Number 1?');
+      var number2 = +prompt('Number 2?');
+      var number3 = +prompt('Number 3?');
+
+      alert(Math.max(number1,number2,number3));
+      
+   </script>
+</body>
+</html>

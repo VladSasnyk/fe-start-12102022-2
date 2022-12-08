@@ -1,0 +1,64 @@
+!<!-- 
+    1. По координатам двух точек, которые вводит пользователь, определить уравнение прямой, проходящей через эти точки.
+    Общий вид уравнения: y = kx + b; где k = (y1 - y2) / (x1 - x2), b = y2 - k*x2.
+    
+    2. Обменять значения двух переменных, используя третью (буферную) переменную.
+    
+    3. Объявите две переменные: admin и name. Запишите в name строку "Василий". Замените значение из name в admin. Выведите admin.
+    
+    4. Получить от пользователя данные о пользователе: имя, фамилию, возраст. Обработать их и вывести на экран.
+    
+    5. Запросите у пользователя его возраст, после чего выведите на экран модальное окно с вопросом: "Ваш возраст ...(введеное пользователем число) лет?". Далее в зависимости от выбора пользователя выводится модальное окно с информацией true или false.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // 1
+        var y1 = +prompt('y1?');
+        var x1 = +prompt('x1?');
+        var y2 = +prompt('y2?');
+        var x2 = +prompt('x2');
+
+        var k = (y1-y2)/(x1-x2);
+        var b = y2-k*x2;
+
+        console.log(`y = ${k}x + ${b}`);
+        // 2
+        var q = 10;
+        var w = 20;
+
+        var e = q;
+        q = w;
+        w = q;
+        console.log(`q = ${q}; w = ${e}`);
+
+        // 3 
+        var admin;
+        var name = 'Василь';
+        admin = name;
+        console.log(admin);
+
+        //4
+        var name = prompt('name?');
+        var lastname = prompt('lastname?');
+        var age = +prompt('age?');
+
+        alert(`Name: ${name} ; Lastname: ${lastname}; Age: ${age} `);
+
+        // 5
+
+        var age = +prompt('Ваш вік?');
+        var question = confirm(`Ваш вік ${age} років?`);
+        var answer = alert(question);
+
+    </script>
+</body>
+</html>
