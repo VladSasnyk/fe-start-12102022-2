@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+    
+       // 1. Построить прямоугольный треугольник состоящий из символа "*".
+    for(let i=1; i<10;i++){
+        for(let j=1;j<=i; j++){
+            document.write(`* `);
+        }
+        document.write(`</br>`);
+    }
+    //Варіант2
+    document.write(`</br>`);
+
+    for(let i=10;i>0;i--){
+        
+        for(let j=1;j<i; j++){
+            document.write(`* `);
+        }
+        document.write(`</br>`);
+    }
+    
+     // 2. Дано два числа A и B где (A<B). 
+    // Выведите на экран суму всех чисел расположенных в числовом промежутке от А до В. 
+    // Выведите на экран все нечетные значения, расположенные в числовом промежутке от А до В. 
+    let number1 = +prompt('number1?');
+    let number2 = +prompt('number2?');
+    if(number1>number2){
+        alert(`number1 має бути менше за number2`);
+    }
+    else{
+        let sum = 0;
+        for(let i=0; i<=number2; i++){
+            if(i>=number1){
+                sum +=i;    
+            }
+            if(i%2 == 1 && i>=number1){
+                document.write(i+' ');
+            }
+        }
+        document.write(`</br>Sum = ${sum}`);
+        
+    }        
+    
+    document.write(`</br>`);
+    // 3. Вывести на экран ряд чисел Фибоначчи, состоящий из n элементов (n принять от пользователя).
+    //    Числа Фибоначчи – это элементы числовой последовательности, в которой каждое последующее число равно сумме двух предыдущих.
+    
+        
+    let number = +prompt('N?');
+        let n1 = 1;
+        let n2 = 0;
+        for(let i=0; i<number;i++){
+            n1 = n1 + n2;
+            n2 = n1 - n2;
+            document.write(n2+` `);
+        }
+    </script>
+</body>
+</html>
