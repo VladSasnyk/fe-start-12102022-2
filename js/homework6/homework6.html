@@ -1,0 +1,117 @@
+﻿<!-- 
+    3. Создать массив, который будет хранить в себе информацию о сотрудниках предприятия. Каждый элемент масива — объект,
+       содержащий свойства: name, sName, age, occupation, и метод show, который выводит всю информацию о пользователе.
+       Реализовать заполнение массива пользователем. По окончанию заполнения — вывести информацию о сотрудниках.
+    
+    4. Для предыдущего задания создайте функцию, которая будет принимать в себя массив объектов-сотрудников, и каждому из объектов
+       будет добавлять новое свойство "salary", хранящее зарплату сотрудника. 
+       Зарплата расчитывается, исходя из значения свойства "occupation" следующим образом:
+           • "director" — 3000;
+           • "manager" — 1500;
+           • "programmer" — 2000;
+           • для остальных значений — 1000.
+       После выполнения функции — вывести информацию о сотрудниках.
+           
+    5. Для задания 3 создать метод, позволяющий отсортировать массив сотрудников по одному из свойств: name, sName, age, occupation, salary.
+       Параметр для сортировки принимается от пользователя.
+       После выполнения функции — вывести информацию о сотрудниках.
+
+     -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <script type="text/javascript">
+      
+      // 1. Создать объект Point, содержащий два свойства: "x" и "y" — координаты точки, и метод GetQuadrant, вычисляющий,
+      //  в каком квадранте в декартовой системе координат находится данная точка.
+      //  Протестируйте данный объект, изменяя значения его координат, и повторно вызавая метод GetQuadrant.
+
+      const Point = {
+         x: 10,
+         y: 20,
+         GetQudrant: function(){
+            if(this.x > 0 && this.y >0){
+               console.log('Дана точка знаходиться в I квадранті');
+            }
+            else if(this.x < 0 && this.y > 0){
+               console.log('Дана точка знаходиться в II квадранті');
+            }
+            else if(this.x < 0 && this.y < 0){
+               console.log('Дана точка знаходиться в III квадранті');
+            }
+            else if(this.x > 0 && this.y < 0){
+               console.log('Дана точка знаходиться в IV квадранті');
+            }
+            else{
+               console.log('Дана точка знаходиться на початковій координаті');
+            }
+            
+         }
+      }
+
+      Point.GetQudrant();
+      Point.x = +prompt('Введіть значення x');
+      Point.y = +prompt('Введіть значення y');
+      Point.GetQudrant();
+      
+
+      // 4. Для предыдущего задания создайте функцию, которая будет принимать в себя массив объектов-сотрудников, и каждому из объектов
+      //  будет добавлять новое свойство "salary", хранящее зарплату сотрудника. 
+      //  Зарплата расчитывается, исходя из значения свойства "occupation" следующим образом:
+      //      • "director" — 3000;
+      //      • "manager" — 1500;
+      //      • "programmer" — 2000;
+      //      • для остальных значений — 1000.
+      //  После выполнения функции — вывести информацию о сотрудниках.
+
+         const emploiesArr = [];
+         const empoleeSum = prompt('Кількість працівників?');
+         let personObj = {};
+            for(i=0;i<empoleeSum;i++){
+               personObj.name = prompt('name?');
+               personObj.secName = prompt('secName?');
+               personObj.age = prompt('age?');
+               personObj.occupation = prompt('occupation?');
+               emploiesArr.push(personObj);
+            }
+            
+            
+         personObj.addSalary = function(){
+            for(i=0;i<empoleeSum;i++){
+            if(this.occupation === 'director'){
+               personObj.salary = 3000;
+            }
+            else if(this.occupation === 'manager'){
+               personObj.salary = 1500;
+            }
+            else if(this.occupation === 'programmer'){
+               personObj.salary = 2000;
+            }
+            else{
+               personObj.salary = 1000;
+            }
+         }
+         }  
+
+         personObj.showInfo = function(){
+         document.write(`Name - ${this.name} <br> secName - ${this.secName} <br> Age - ${this.age} <br> Occupation - ${this.occupation} <br> Salary - ${this.salary}`);
+         }
+         
+         for(i=0;i<emploiesArr.length;i++){
+            emploiesArr[i].addSalary();
+         }
+         for(i=0;i<emploiesArr.length;i++){
+            emploiesArr[i].showInfo();
+         }
+         
+
+   </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        //1. Сделать собственные примеры методов применяемых для массивов.
+        let colors = ['red','yellow','black','orange','white'];
+        
+        document.write(colors.join(' </br> ')); // join
+        document.write('<hr>');
+        let newColors = ['green','brown'];
+       
+        document.write(colors.concat(newColors)); // concat
+        document.write('<hr>');
+
+        document.write(colors.reverse()); // reverse
+        document.write('<hr>');
+
+        document.write(colors.slice(0,3)); // slice
+        document.write('<hr>')
+
+        colors.splice(0,2,"blue");
+        document.write(colors);   // splice
+        document.write('<hr>');
+
+        colors.sort();
+        document.write(colors); // sort
+        document.write('<hr>');
+
+        colors.push('gray');
+        document.write(colors); //push
+        document.write('<hr>')
+
+        // //2. Создать функцию для нахождения минимального и максимального элемента массива getMinAndMax(array).
+        // //  Результат должен выводиться в консоль.
+            let min,
+                max;
+        function getMinAndMax(array){
+            min = Math.min.apply(null, array);
+            max = Math.max.apply(null, array);
+        }
+            getMinAndMax([15,50,30,10,20,152,60]);
+            console.log(`Min - ${min}, Max - ${max}`);
+
+        // //3. Определить элементы массива и вывести их значения, индексы которых лежит в указанном пределе. Предел вводит пользователь.
+
+        
+        
+        let numbers3 = [0,6,1,2,66,23,61,23,12,12];
+        let low = prompt('Нижня межа - ?');
+        let high = prompt('Верхня межа - ?');
+
+        console.log(numbers3.slice(low,high));
+
+        // 4. Отсортировать массив на 10 чисел в порядке возростания. Значения принимаются от пользователя. Сортировка осушествляется методом sort().
+        
+        let numbers = [];
+        while (true) {
+            let value = prompt("Введіть номер",0);
+            if (value === "" || value === null || !isFinite(value)) break;
+            numbers.push(+value);   
+        }
+        numbers.sort(function (a, b) { return a - b; });
+        console.log(numbers);
+
+        //5. Создать программу, выполняющую вставку элемента в массив после элемента, значение которого укажет пользователь.
+            let numbers2 = [1,2,3,4,5,6,7];
+            let a = +prompt('Після якого елемента вставити?');
+            numbers2.splice(a,0,8,9,10);
+            console.log(numbers2);
+
+        // 6. Необходимо получить предпоследний элемент из массива month и вывести его на экран. 
+        //     var month = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"]    
+            
+            let month = ["Січень","Лютий","Березень","Квітень","Травень","Червень","Липень","Серпень","Вересень","Жовтень","Листопад","Грудень"];
+            console.log(month[month.length-2]);
+            console.log(month[10]);
+
+        // 7. Создать два произвольных массива: один массив - любимая спортивная команда / модели автомобилей / города, во втором - количество игроков в команде / объем двигателя / количество жителей в городе. Объединить данные из двух массивов и вывести их в одну строку.     
+            
+            let city = ['Lviv','Kyiv','Ivano-Frankivsk'];
+            let population = [720000,2900000,230000];
+            for (let i=0; i < city.length; i++){
+                console.log(`${city[i]} - ${population[i]}`);
+            }
+   </script>
+</body>
+</html>
