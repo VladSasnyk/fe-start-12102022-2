@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+        .checked{
+            background: #1AB188;
+        }
+        .checkedMenu{
+            display: block;
+        }
+        
+    </style>
+</head>
+<body>
+    <form action="" class="form">
+        <div class="form__menu">
+            <div class="form__signUp checked" id="signUp">Sign Up</div>
+            <div class="form__logIn" id="logIn">Log In</div>
+        </div>
+        <div class="signUp__menu checkedMenu">
+            <div class="signUp__title">Sign Up for Free</div>
+                <input type="text" placeholder="First Name*">
+                <input type="text" placeholder="Last Name">
+                <input type="email" placeholder="Email Adress" class="email">
+                <input type="password" placeholder="Set A Password" class="password">
+                <input type="submit" value="GET STARTED" class = "submit">
+        </div>
+        <div class="logIn__menu">
+            <div class="signUp__title">Welcome Back!</div>
+                <input type="email" placeholder="Email Adress" class="email">
+                <input type="password" placeholder="Password" class="password">
+                <input type="submit" value="LOG IN" class = "submit">
+        </div>
+    </form>
+</body>
+<script>
+    const logIn = document.getElementById('logIn');
+    const signUp = document.getElementById('signUp');
+    const signUpMenu = document.querySelector('.signUp__menu');
+    const logInMenu = document.querySelector('.logIn__menu');
+
+    logIn.addEventListener('click',function(){
+        logIn.classList.add('checked');
+        signUp.classList.remove('checked');
+        signUpMenu.classList.remove('checkedMenu');
+        logInMenu.classList.add('checkedMenu');
+    })
+    signUp.addEventListener('click',function(){
+        signUp.classList.add('checked');
+        logIn.classList.remove('checked');
+        signUpMenu.classList.add('checkedMenu');
+        logInMenu.classList.remove('checkedMenu');
+    })
+</script>
+</html>
