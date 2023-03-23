@@ -1,0 +1,14 @@
+body{
+    text-align:center;
+}
+.currencyFlex{
+    display: flex;
+    border: 1px solid black;
+}
+.currencyName, .currencyRate{
+    font-size: 1.5em;
+    width: 50%;
+    border: 1px solid black;
+}
+    
+    
